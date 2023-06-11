@@ -1,0 +1,17 @@
+[build]
+    publish = "dist"
+    command = "pnpm run build"
+
+[dev]
+    publish = "src"
+    command = "pnpm run dev"
+    port = 8080
+
+[functions]
+    directory = "functions/"
+    node_bundler = "esbuild"
+
+[[redirects]]
+    from = "/*",
+    to = "index.html"
+    status = 200

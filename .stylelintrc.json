@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "color-named": null,
+    "color-no-hex": true,
+    "declaration-colon-space-after": "always",
+    "value-keyword-case": "lower",
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "custom-property-empty-line-before": null,
+    "selector-class-pattern": null,
+    "function-name-case": null,
+    "declaration-empty-line-before": null,
+    "hue-degree-notation": null,
+    "alpha-value-notation": "number"
+  },
+  "ignoreFiles": ["node_modules/**/**/*.{scss,css}", "dist/"]
+}
