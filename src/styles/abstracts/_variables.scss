@@ -5,4 +5,36 @@
   --base-gap: 0.5em;
   --base-br: 0.5em;
   --base-lh: 1.5;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi: 600;
+  --fw-bold: 700;
+
+  /* Font Stacks */
+  --fs-netflix-sans: "Netflix Sans", sans-serif;
+
+  /* Color Palettes */
+  --hue: 210;
+  --swatch-1: oklch(99% 0.05 var(--hue));
+  --swatch-2: oklch(89% 0.08 var(--hue));
+  --swatch-3: oklch(80% 0.2 var(--hue));
+  --swatch-4: oklch(72% 0.25 var(--hue));
+  --swatch-5: oklch(67% 0.31 var(--hue));
+  --swatch-6: oklch(50% 0.27 var(--hue));
+  --swatch-7: oklch(36% 0.2 var(--hue));
+  --swatch-8: oklch(25% 0.25 var(--hue));
+  --swatch-9: oklch(15% 0.1 var(--hue));
+  --swatch-10: oklch(5% 0.075 var(--hue));
+
+  --body-bg: var(--swatch-10);
+  --text-1: var(--swatch-1);
+  --text-2: var(--swatch-2);
+  --text-3: var(--swatch-3);
+
+  // Navigation
+  --nav-container-bg: var(--swatch-9);
+  --nav-link-hover-bg: var(--swatch-8);
 }
