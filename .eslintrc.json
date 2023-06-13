@@ -47,5 +47,5 @@
     "no-extra-semi": 2,
     "no-nested-ternary": 2
   },
-  "ignorePatterns": ["node_modules/*", "dist/*", "*.config.js"]
+  "ignorePatterns": ["node_modules/*", "dist/*", "*.config.js", "functions/"]
 }
