@@ -1,0 +1,40 @@
+html {
+  font-size: 75%;
+
+  @media screen and (width > 480px) {
+    font-size: 87.5%;
+  }
+  @media screen and (width > 768px) {
+    font-size: 100%;
+  }
+  @media screen and (width > 992px) {
+    font-size: 112.5%;
+  }
+  @media screen and (width > 1279px) {
+    font-size: 125%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  font-size: var(--base-fs);
+}
