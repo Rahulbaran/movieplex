@@ -37,4 +37,33 @@ body {
 
 body {
   font-size: var(--base-fs);
+  font-family: var(--fs-netflix-sans);
+  font-weight: var(--fw-regular);
+  line-height: var(--base-lh);
+  background-color: var(--body-bg);
+}
+
+.app-wrapper {
+  position: relative;
+  min-block-size: 100vh;
+
+  > .navigation-container {
+    position: fixed;
+    bottom: 0;
+    inset-inline: 0;
+  }
+
+  @media screen and (width > 768px) {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+
+    > .navigation-container {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  @media screen and (width > 992px) {
+    grid-template-columns: 200px 1fr;
+  }
 }

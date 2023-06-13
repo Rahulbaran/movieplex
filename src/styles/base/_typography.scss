@@ -1,0 +1,32 @@
+:where(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-1);
+
+  &:not(h5, h6) {
+    line-height: calc(var(--base-lh) * 0.6);
+  }
+}
+
+:where(p, span, a, label) {
+  font-size: calc(var(--base-fs) * 1.1);
+  color: var(--text-3);
+
+  &:not(a) {
+    color: var(--text-2);
+  }
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+iframe,
+audio,
+video {
+  display: block;
+}
