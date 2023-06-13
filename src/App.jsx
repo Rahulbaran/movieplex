@@ -43,7 +43,7 @@ const router = createBrowserRouter(
           errorElement={<h1>Not Available</h1>}
         />
       </Route>
-      <Route path="tvshows/:id" element={<TvShowDetails />} />
+      <Route path="tvshow/:id" element={<TvShowDetails />} />
 
       <Route path="search" element={<Search />} />
       <Route path="about" element={<AboutUs />} />
