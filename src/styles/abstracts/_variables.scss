@@ -3,7 +3,7 @@
   --base-padding: 0.5em;
   --base-margin: 0.5em;
   --base-gap: 0.5em;
-  --base-br: 0.5em;
+  --base-br: 20px;
   --base-lh: 1.5;
 
   /* Font Weights */
@@ -37,4 +37,8 @@
   // Navigation
   --nav-container-bg: var(--swatch-9);
   --nav-link-hover-bg: var(--swatch-8);
+
+  // Loader
+  --loader-bg: var(--swatch-9);
+  --loader-bg-top: var(--swatch-3);
 }
