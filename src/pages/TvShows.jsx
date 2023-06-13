@@ -1,7 +1,7 @@
 export default function TvShows() {
   return (
-    <main className="container tvshows-container">
+    <section>
       <h1>TvShows Container</h1>
-    </main>
+    </section>
   );
 }
