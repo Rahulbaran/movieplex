@@ -26,6 +26,7 @@ specifiers:
   stylelint: ^15.6.3
   stylelint-config-prettier-scss: ^1.0.0
   stylelint-config-standard-scss: ^9.0.0
+  swiper: ^9.4.0
   terser: ^5.17.7
   vite: ^4.3.9
   vite-plugin-pwa: ^0.16.4
@@ -38,6 +39,7 @@ dependencies:
   react-icons: 4.9.0_react@18.2.0
   react-loading-skeleton: 3.3.1_react@18.2.0
   react-router-dom: 6.11.2_biqbaboplfbrettd7655fr4n2y
+  swiper: 9.4.0
 
 devDependencies:
   '@types/react': 18.2.8
@@ -4862,6 +4864,10 @@ packages:
     resolution: {integrity: sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==}
     dev: true
 
+  /ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+    dev: false
+
   /stop-iteration-iterator/1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
     engines: {node: '>= 0.4'}
@@ -5102,6 +5108,13 @@ packages:
   /svg-tags/1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
     dev: true
+
+  /swiper/9.4.0:
+    resolution: {integrity: sha512-AKame5qkFnNKCJ8Bfn3YuOi/LoUuAESVdCv/BJH5fKgdAUFRtImZXV3gdYlYovXbasJDV6hHNWdQvdzPB6aebw==}
+    engines: {node: '>= 4.7.0'}
+    dependencies:
+      ssr-window: 4.0.2
+    dev: false
 
   /systemjs/6.14.1:
     resolution: {integrity: sha512-8ftwWd+XnQtZ/aGbatrN4QFNGrKJzmbtixW+ODpci7pyoTajg4sonPP8aFLESAcuVxaC1FyDESt+SpfFCH9rZQ==}
