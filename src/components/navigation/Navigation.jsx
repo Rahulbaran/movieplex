@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   HomeTab,
   MoviesTab,
@@ -11,6 +11,12 @@ import {
 export default function Navigation() {
   return (
     <div className="navigation-container">
+      <div className="logo-container">
+        <Link to="/" className="logo">
+          <img src="./logo/movieplex.png" alt="logo" />
+        </Link>
+      </div>
+
       <nav className="navigation">
         <ul className="navigation-menu">
           <li>
