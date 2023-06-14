@@ -1,7 +1,7 @@
 .navigation-container {
   background-color: var(--nav-container-bg);
   box-shadow: var(--x-offset, 0) var(--y-offset, -5px) 15px
-    oklch(20% 0.1 var(--hue) / 0.3);
+    oklch(20% 0.1 var(--hue) / 0.2);
 }
 
 .logo-container,
@@ -67,7 +67,7 @@
   @media screen and (width > 768px) {
     &-container {
       block-size: 100vh;
-      --x-offset: 5px;
+      --x-offset: 4px;
       --y-offset: 0;
     }
 
@@ -95,7 +95,7 @@
       }
 
       svg {
-        font-size: calc(var(--base-fs) * 1.6);
+        font-size: calc(var(--base-fs) * 1.4);
       }
     }
   }
