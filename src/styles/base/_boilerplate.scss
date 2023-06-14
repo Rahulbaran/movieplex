@@ -44,6 +44,8 @@ body {
 }
 
 .app-wrapper {
+  --navigation-width: 0;
+
   position: relative;
   min-block-size: 100vh;
 
@@ -51,11 +53,15 @@ body {
     position: fixed;
     bottom: 0;
     inset-inline: 0;
+    z-index: 100;
   }
 
   @media screen and (width > 768px) {
+    --navigation-width: 110px;
+
     display: grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: var(--navigation-width) 1fr;
+    grid-template-rows: auto;
 
     > .navigation-container {
       position: sticky;
@@ -64,6 +70,12 @@ body {
   }
 
   @media screen and (width > 992px) {
-    grid-template-columns: 200px 1fr;
+    --navigation-width: 200px;
   }
+}
+
+.container {
+  width: 100%;
+  min-block-size: 100vh;
+  overflow-x: hidden;
 }
