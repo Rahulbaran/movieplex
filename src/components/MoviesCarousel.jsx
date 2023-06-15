@@ -15,7 +15,7 @@ export default function MoviesCarousel({ movies }) {
       grabCursor={true}
       loop={true}
     >
-      {movies.slice(0, 5).map(movie => {
+      {movies.slice(0, 7).map(movie => {
         return (
           <SwiperSlide
             key={movie.id}
