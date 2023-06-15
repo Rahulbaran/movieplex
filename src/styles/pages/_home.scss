@@ -1,3 +1,4 @@
+// Movies Carousel
 .carousel-wrapper {
   .swiper,
   .swiper-wrapper {
@@ -18,5 +19,60 @@
 
   .swiper-pagination-bullet-active {
     background-color: var(--swiper-bullet-active-bg);
+  }
+}
+
+.movie-swiper {
+  padding-inline: calc(var(--base-padding) * 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--base-gap) * 5);
+
+  .movie-content {
+    display: grid;
+    gap: calc(var(--base-gap) * 5);
+    justify-items: start;
+
+    h2 {
+      font-size: calc(var(--base-fs) * 3);
+      line-height: calc(var(--base-lh) * 0.75);
+      text-shadow: 10px 5px 10px oklch(5% 0.05 200 / 0.8);
+    }
+
+    p {
+      color: var(--text-1);
+      font-weight: var(--fw-light);
+    }
+
+    & > a {
+      padding: calc(var(--base-padding) * 0.2);
+    }
+  }
+
+  .movie-image-container {
+    display: none;
+
+    img {
+      border-radius: calc(var(--base-br) * 0.75);
+      box-shadow: 0 8px 13px oklch(30% 0.2 200 / 0.3);
+    }
+  }
+
+  // Media Queries
+  @media screen and (width > 992px) {
+    .movie-image-container {
+      display: block;
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    .movie-content p {
+      font-size: calc(var(--base-fs) * 1.2);
+    }
+
+    .movie-content > a {
+      font-size: calc(var(--base-fs) * 1.25);
+    }
   }
 }
