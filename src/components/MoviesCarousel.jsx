@@ -12,7 +12,7 @@ export default function MoviesCarousel({ movies }) {
     <Swiper
       modules={[Pagination, A11y, Autoplay]}
       pagination={{ clickable: true }}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 10000 }}
       grabCursor={true}
       loop={true}
     >
