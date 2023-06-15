@@ -7,7 +7,7 @@ import MoviesCarousel from "../components/MoviesCarousel";
 
 export default function Home() {
   useMeta({ title: "Home | Movieplex", description: "" });
-  const res = useFetch("/.netlify/functions/getMovies");
+  const res = useFetch("/.netlify/functions/getMoviesAndShows");
 
   if (!res.status) {
     return <Loader />;
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main className="container home-container">
       <section className="carousel-wrapper">
-        <MoviesCarousel movies={res.response.results} />
+        <MoviesCarousel movies={res.movies.popular.results} />
       </section>
     </main>
   );
