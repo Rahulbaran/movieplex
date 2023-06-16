@@ -1,9 +1,9 @@
 import useMeta from "../hooks/useMeta";
 
-export default function TvShowDetails({ tvshow }) {
+export default function TvShowDetails() {
   useMeta({
-    title: `${tvshow.title} | Movieplex`,
-    description: tvshow.overview.slice(0, 140)
+    title: "Random Show | Movieplex",
+    description: "random info"
   });
 
   return (

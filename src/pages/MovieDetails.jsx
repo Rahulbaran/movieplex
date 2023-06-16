@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 import useMeta from "../hooks/useMeta";
 
-export default function MovieDetails({ movie }) {
+export default function MovieDetails() {
+  const [movie, setMovie] = useState({ title: "Random movie", overview: "" });
   useMeta({
     title: `${movie.title} | Movieplex`,
     description: movie.overview.slice(0, 140)
