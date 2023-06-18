@@ -11,7 +11,7 @@ import MoviesLayout from "./layouts/MoviesLayout";
 import TvShowsLayout from "./layouts/TvShowsLayout";
 
 /* Pages */
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Movies from "./pages/Movies";
 import MovieDetails from "./pages/MovieDetails";
 import TvShows from "./pages/TvShows";

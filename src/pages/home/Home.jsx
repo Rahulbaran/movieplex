@@ -1,9 +1,9 @@
 // Custom Hooks
-import useMeta from "../hooks/useMeta";
-import useFetch from "../hooks/useFetch";
+import useMeta from "../../hooks/useMeta";
+import useFetch from "../../hooks/useFetch";
 
-import Loader from "../components/Loader";
-import MoviesCarousel from "../components/MoviesCarousel";
+import Loader from "../../components/Loader";
+import MoviesCarousel from "./MoviesCarousel";
 
 export default function Home() {
   useMeta({ title: "Home | Movieplex", description: "" });
