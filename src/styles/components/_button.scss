@@ -1,0 +1,39 @@
+.btn {
+  padding: calc(var(--base-padding) * 1.4) calc(var(--base-padding) * 3.5);
+  font-family: inherit;
+  font-size: calc(var(--base-fs) * 1.1);
+  border: none;
+  border-radius: calc(var(--base-br) * 1.25);
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--btn-before-bg);
+    z-index: -1;
+    transition: opacity 500ms ease-in, scale 350ms ease-in;
+  }
+
+  &:hover::before {
+    opacity: 0;
+    scale: 1.125 1.35;
+    transition: opacity 600ms ease-out, scale 400ms ease-out;
+  }
+
+  &-primary {
+    --btn-text-color: var(--primary-btn-text-color);
+    --btn-bg: var(--primary-btn-bg);
+
+    &::before {
+      --btn-before-bg: var(--primary-btn-before-bg);
+    }
+  }
+
+  @media screen and (width > 992px) {
+    border-radius: calc(var(--base-br) * 1.5);
+  }
+}

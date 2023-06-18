@@ -44,10 +44,6 @@
       color: var(--text-1);
       font-weight: var(--fw-light);
     }
-
-    & > a {
-      padding: calc(var(--base-padding) * 0.2);
-    }
   }
 
   .movie-image-container {
