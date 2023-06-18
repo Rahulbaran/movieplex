@@ -37,7 +37,7 @@ export default function MoviesCarousel({ movies }) {
                   ? `${movie.overview.slice(0, 300)}...`
                   : movie.overview}
               </p>
-              <Link to={`/movie/${movie.id}`}>Know More</Link>
+              <Link to={`/movie/${movie.id}`} className="btn btn-primary">Know More</Link>
             </div>
 
             <div className="movie-image-container">
