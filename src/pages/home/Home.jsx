@@ -4,6 +4,8 @@ import useFetch from "../../hooks/useFetch";
 
 import Loader from "../../components/Loader";
 import MoviesCarousel from "./MoviesCarousel";
+import Movies from "./Movies";
+import Shows from "./Shows";
 
 export default function Home() {
   useMeta({ title: "Home | Movieplex", description: "" });
@@ -24,6 +26,30 @@ export default function Home() {
     <main className="container home-container">
       <section className="carousel-wrapper">
         <MoviesCarousel movies={res.movies.popular.results} />
+      </section>
+
+      <section className="movies-shows-wrapper">
+        <Movies
+          movies={res.movies.popular.results}
+          title={"Popular Movies"}
+          type={"popular"}
+        />
+        <Movies
+          movies={res.movies.top_rated.results}
+          title={"Top Rated Movies"}
+          type={"top_rated"}
+        />
+
+        <Shows
+          shows={res.shows.popular.results}
+          title={"Popular Shows"}
+          type={"popular"}
+        />
+        <Shows
+          shows={res.shows.top_rated.results}
+          title={"Top Rated Shows"}
+          type={"top_rated"}
+        />
       </section>
     </main>
   );
