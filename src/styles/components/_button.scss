@@ -1,7 +1,7 @@
 .btn {
   padding: calc(var(--base-padding) * 1.4) calc(var(--base-padding) * 3.5);
   font-family: inherit;
-  font-size: calc(var(--base-fs) * 1.1);
+  font-size: calc(var(--base-fs) * 1.25);
   border: none;
   border-radius: calc(var(--base-br) * 1.25);
   color: var(--btn-text-color);
@@ -35,5 +35,6 @@
 
   @media screen and (width > 992px) {
     border-radius: calc(var(--base-br) * 1.5);
+    font-size: calc(var(--base-fs) * 1.1);
   }
 }
