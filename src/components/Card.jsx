@@ -13,7 +13,10 @@ export default function Card({ data }) {
         />
       </div>
 
-      <Link className="card-body">
+      <Link
+        to={data.name ? `/tvshow/${data.id}` : `/movie/${data.id}`}
+        className="card-body"
+      >
         <div className="rating">
           <MdStar />
           <span>{data.vote_average}</span>
