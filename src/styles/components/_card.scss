@@ -3,6 +3,7 @@
   height: 24em;
   position: relative;
   border-radius: calc(var(--base-br) * 0.25);
+  box-shadow: 0 6px 10px oklch(20% 0.1 200 / 0.5);
   transition: opacity 200ms ease, scale 200ms ease, translate 200ms ease;
 
   &-header img {
@@ -26,7 +27,6 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: calc(var(--base-padding) * 1.5);
-    box-shadow: 0 0 10px oklch(20% 0.1 200 / 0.4);
     clip-path: polygon(
       0 var(--y, 100%),
       100% var(--y, 100%),
