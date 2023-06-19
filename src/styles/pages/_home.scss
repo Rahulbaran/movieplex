@@ -71,14 +71,14 @@
 // Movies & Show Wrapper
 .movies-shows-wrapper {
   padding-inline: calc(var(--base-padding) * 3);
-  margin-block: calc(var(--base-margin) * 8);
+  margin-block: calc(var(--base-margin) * 10);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
-  gap: calc(var(--base-gap) * 10);
+  gap: calc(var(--base-gap) * 14);
 
   h3 {
-    margin-block-end: calc(var(--base-margin) * 2.5);
+    margin-block-end: calc(var(--base-margin) * 3);
     font-size: calc(var(--base-fs) * 1.5);
     text-decoration: underline 0.12em solid;
     text-underline-offset: 3px;
@@ -88,12 +88,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     grid-template-rows: auto;
-    gap: calc(var(--base-gap) * 3);
+    gap: calc(var(--base-gap) * 4);
   }
 
   .movies-page-link-container,
   .tvshows-page-link-container {
     text-align: center;
     margin-block-start: calc(var(--base-margin) * 5);
+  }
+
+  @media screen and (width > 768px) {
+    gap: calc(var(--base-gap) * 3);
   }
 }
