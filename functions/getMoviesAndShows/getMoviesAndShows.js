@@ -24,7 +24,7 @@ export const handler = async () => {
       fetchTMDBData(),
       fetchTMDBData("movie", "top_rated"),
       fetchTMDBData("tv"),
-      fetchTMDBData("tv", "on_the_air")
+      fetchTMDBData("tv", "top_rated")
     ]);
 
     return {
