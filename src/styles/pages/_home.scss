@@ -98,6 +98,14 @@
   }
 
   @media screen and (width > 768px) {
-    gap: calc(var(--base-gap) * 3);
+    .cards {
+      gap: calc(var(--base-gap) * 3);
+    }
+  }
+
+  @media screen and (width <= 480px) {
+    h3 {
+      font-size: calc(var(--base-fs) * 1.7);
+    }
   }
 }
