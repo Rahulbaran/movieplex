@@ -17,7 +17,7 @@
   }
 
   .movie-swiper {
-    padding-inline: calc(var(--base-padding) * 3);
+    padding-inline: calc(var(--base-padding) * 5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,12 +50,6 @@
     }
 
     // Media Queries
-    @media screen and (width > 992px) {
-      .movie-image-container {
-        display: block;
-      }
-    }
-
     @media screen and (width <= 768px) {
       .movie-content p {
         font-size: calc(var(--base-fs) * 1.2);
@@ -65,12 +59,22 @@
         font-size: calc(var(--base-fs) * 1.25);
       }
     }
+
+    @media screen and (width > 768px) {
+      padding-inline: calc(var(--base-padding) * 3);
+    }
+
+    @media screen and (width > 992px) {
+      .movie-image-container {
+        display: block;
+      }
+    }
   }
 }
 
 // Movies & Show Wrapper
 .movies-shows-wrapper {
-  padding-inline: calc(var(--base-padding) * 3);
+  padding-inline: calc(var(--base-padding) * 5);
   margin-block: calc(var(--base-margin) * 10);
   display: grid;
   grid-template-columns: 1fr;
@@ -97,15 +101,17 @@
     margin-block-start: calc(var(--base-margin) * 5);
   }
 
-  @media screen and (width > 768px) {
-    .cards {
-      gap: calc(var(--base-gap) * 3);
-    }
-  }
-
   @media screen and (width <= 480px) {
     h3 {
       font-size: calc(var(--base-fs) * 1.7);
+    }
+  }
+
+  @media screen and (width > 768px) {
+    padding-inline: calc(var(--base-padding) * 3);
+
+    .cards {
+      gap: calc(var(--base-gap) * 3);
     }
   }
 }
