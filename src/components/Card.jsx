@@ -6,8 +6,11 @@ export default function Card({ data }) {
     <div className="card" key={data.id}>
       <div className="card-header">
         <img
-          src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w342${data.poster_path}`}
+          srcSet={`https://image.tmdb.org/t/p/w300${data.poster_path} 300w, https://image.tmdb.org/t/p/w400${data.poster_path} 400w, https://image.tmdb.org/t/p/w500${data.poster_path} 500w`}
           alt={data.title ? data.title : data.name}
+          width="300"
+          height="400"
           loading="lazy"
           decoding="async"
         />
