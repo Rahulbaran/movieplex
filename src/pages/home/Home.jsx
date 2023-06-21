@@ -1,11 +1,14 @@
+import { lazy, Suspense } from "react";
+
 // Custom Hooks
 import useMeta from "../../hooks/useMeta";
 import useFetch from "../../hooks/useFetch";
 
 import Loader from "../../components/Loader";
 import MoviesCarousel from "./MoviesCarousel";
-import Movies from "./Movies";
-import Shows from "./Shows";
+
+const Movies = lazy(() => import("./Movies"));
+const Shows = lazy(() => import("./Shows"));
 
 export default function Home() {
   useMeta({ title: "Home | Movieplex", description: "" });
@@ -29,27 +32,31 @@ export default function Home() {
       </section>
 
       <section className="movies-shows-wrapper">
-        <Movies
-          movies={res.movies.popular.results}
-          title={"Popular Movies"}
-          type={"popular"}
-        />
-        <Movies
-          movies={res.movies.top_rated.results}
-          title={"Top Rated Movies"}
-          type={"top_rated"}
-        />
+        <Suspense fallback={<Loader />}>
+          <Movies
+            movies={res.movies.popular.results}
+            title={"Popular Movies"}
+            type={"popular"}
+          />
+          <Movies
+            movies={res.movies.top_rated.results}
+            title={"Top Rated Movies"}
+            type={"top_rated"}
+          />
+        </Suspense>
 
-        <Shows
-          shows={res.shows.popular.results}
-          title={"Popular Shows"}
-          type={"popular"}
-        />
-        <Shows
-          shows={res.shows.top_rated.results}
-          title={"Top Rated Shows"}
-          type={"top_rated"}
-        />
+        <Suspense fallback={<Loader />}>
+          <Shows
+            shows={res.shows.popular.results}
+            title={"Popular Shows"}
+            type={"popular"}
+          />
+          <Shows
+            shows={res.shows.top_rated.results}
+            title={"Top Rated Shows"}
+            type={"top_rated"}
+          />
+        </Suspense>
       </section>
     </main>
   );
