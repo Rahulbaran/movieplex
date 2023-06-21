@@ -20,32 +20,48 @@ export default function Navigation() {
       <nav className="navigation">
         <ul className="navigation-menu">
           <li>
-            <NavLink className="navigation-link" to="/">
+            <NavLink className="navigation-link" to="/" aria-label="Home">
               <HomeTab />
             </NavLink>
           </li>
           <li>
-            <NavLink className="navigation-link" to="/movies">
+            <NavLink
+              className="navigation-link"
+              to="/movies"
+              aria-label="Movies"
+            >
               <MoviesTab />
             </NavLink>
           </li>
           <li>
-            <NavLink className="navigation-link" to="/tvshows">
+            <NavLink
+              className="navigation-link"
+              to="/tvshows"
+              aria-label="TvShows"
+            >
               <TvShowsTab />
             </NavLink>
           </li>
           <li>
-            <NavLink className="navigation-link" to="/search">
+            <NavLink
+              className="navigation-link"
+              to="/search"
+              aria-label="Search"
+            >
               <SearchTab />
             </NavLink>
           </li>
           <li>
-            <NavLink className="navigation-link" to="/about">
+            <NavLink className="navigation-link" to="/about" aria-label="About">
               <AboutTab />
             </NavLink>
           </li>
           <li>
-            <NavLink className="navigation-link" to="/contact">
+            <NavLink
+              className="navigation-link"
+              to="/contact"
+              aria-label="Contact"
+            >
               <ContactTab />
             </NavLink>
           </li>
