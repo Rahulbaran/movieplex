@@ -1,0 +1,25 @@
+.shows-header {
+  inline-size: 100%;
+  block-size: 150px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+      to top left,
+      oklch(2% 0.05 200 / 0.75),
+      oklch(10% 0.05 200 / 0.6)
+    ),
+    url("./posters/tvshow-poster.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-inline: calc(var(--base-padding) * 3);
+
+  h1 {
+    font-size: calc(var(--base-fs) * 3);
+    text-shadow: 10px 5px 10px oklch(5% 0.05 200 / 0.8);
+    letter-spacing: 1px;
+  }
+
+  @media screen and (width > 992px) {
+    block-size: 175px;
+  }
+}
