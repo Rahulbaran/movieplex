@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 // Hooks
@@ -57,16 +57,16 @@ export default function Movies() {
         <h1>Movies</h1>
       </header>
 
-      <nav>
+      <nav className="movies-navigation">
         <ul>
           <li>
-            <Link to="/movies/popular">Popular</Link>
+            <NavLink to="/movies/popular">Popular</NavLink>
           </li>
           <li>
-            <Link to="/movies/trending">Trending</Link>
+            <NavLink to="/movies/trending">Trending</NavLink>
           </li>
           <li>
-            <Link to="/movies/top_rated">Top rated</Link>
+            <NavLink to="/movies/top_rated">Top rated</NavLink>
           </li>
         </ul>
       </nav>

@@ -23,3 +23,15 @@
     block-size: 175px;
   }
 }
+
+.movies-navigation ul {
+  list-style-type: none;
+  padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 3);
+  display: flex;
+  gap: calc(var(--base-gap) * 2);
+  align-items: center;
+
+  a.active {
+    opacity: 0.6;
+  }
+}
