@@ -43,20 +43,18 @@ export default function Movies() {
     return <Loader />;
   } else if (res.status === "fail") {
     return (
-      <main className="container error-container">
+      <section className="container error-container">
         <h1>{res.error.message}</h1>
         <p>Try again after sometimes</p>
-      </main>
+      </section>
     );
   }
 
   return (
-    <section>
-      <h1>Movies</h1>
-      {res.movies.map(movie => (
-        <p key={movie.id}>{movie.title}</p>
-      ))}
-      <button onClick={loadMovies}>Load more</button>
-    </section>
+    <>
+      <header className="movies-header">
+        <h1>Movies</h1>
+      </header>
+    </>
   );
 }

@@ -51,12 +51,10 @@ export default function TvShows() {
   }
 
   return (
-    <section>
-      <h1>Shows</h1>
-      {res.shows.map(show => (
-        <p key={show.id}>{show.name}</p>
-      ))}
-      <button onClick={loadShows}>Load more</button>
-    </section>
+    <>
+      <header className="shows-header">
+        <h1>TV Shows</h1>
+      </header>
+    </>
   );
 }
