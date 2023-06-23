@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 // Hooks
@@ -55,6 +56,20 @@ export default function Movies() {
       <header className="movies-header">
         <h1>Movies</h1>
       </header>
+
+      <nav>
+        <ul>
+          <li>
+            <Link to="/movies/popular">Popular</Link>
+          </li>
+          <li>
+            <Link to="/movies/trending">Trending</Link>
+          </li>
+          <li>
+            <Link to="/movies/top_rated">Top rated</Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
