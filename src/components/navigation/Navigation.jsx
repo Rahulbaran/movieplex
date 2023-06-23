@@ -13,7 +13,7 @@ export default function Navigation() {
     <div className="navigation-container">
       <div className="logo-container">
         <Link to="/" className="logo">
-          <img src="./logo/movieplex.png" alt="logo" />
+          <img src="/logo/movieplex.png" alt="logo" />
         </Link>
       </div>
 
