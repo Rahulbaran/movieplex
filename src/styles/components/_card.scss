@@ -10,7 +10,7 @@
     height: 300px;
     object-fit: cover;
     border-radius: calc(var(--base-br) * 0.25);
-    border: 2px double var(--card-border);
+    border: 2px solid var(--card-border);
   }
 
   &-body {
