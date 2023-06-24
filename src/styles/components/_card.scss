@@ -3,7 +3,6 @@
   height: 300px;
   position: relative;
   border-radius: calc(var(--base-br) * 0.25);
-  box-shadow: 0 8px 10px oklch(25% 0.1 200 / 0.5);
   transition: opacity 200ms ease, scale 200ms ease, translate 200ms ease;
 
   &-header img {
@@ -11,6 +10,7 @@
     height: 300px;
     object-fit: cover;
     border-radius: calc(var(--base-br) * 0.25);
+    border: 1px solid var(--card-border);
   }
 
   &-body {
