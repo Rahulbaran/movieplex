@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 // Hooks
 import useMeta from "../../hooks/useMeta";
+import useFetchMovies from "../../hooks/useFetchMovies";
 
 // Components
 import Loader from "../../components/Loader";
@@ -14,16 +14,13 @@ import { modifyTitle } from "../../utils/modifyTitle";
 
 export default function Movies() {
   const curType = useParams().type;
-
   useMeta({
     title: `${modifyTitle(curType)} Movies | Movieplex`,
     description: ""
   });
 
-  const [page, setPage] = useState(1);
   const [type, setType] = useState(curType);
-  const [res, setRes] = useState({ status: "", movies: [] });
-  const [initialRender, setInitialRender] = useState(true);
+  const [res, loadMovies, setRes, setPage] = useFetchMovies(type);
 
   useEffect(() => {
     if (type !== curType) {
@@ -31,30 +28,7 @@ export default function Movies() {
       setRes({ status: "", movies: [] });
       setPage(1);
     }
-  }, [type, curType]);
-
-  useEffect(() => {
-    if (initialRender) {
-      setInitialRender(false);
-      return;
-    }
-    const fetchMovies = async () => {
-      try {
-        const response = await axios(
-          `/.netlify/functions/getMovies?page=${page}&type=${type}`
-        );
-        setRes(prev => ({
-          status: "success",
-          movies: [...prev.movies, ...response.data.movies.results]
-        }));
-      } catch (error) {
-        setRes({ status: "fail", error });
-      }
-    };
-    fetchMovies();
-  }, [page, type, initialRender]);
-
-  const loadMovies = () => setPage(prevPage => prevPage + 1);
+  }, [type, setRes, setPage, curType]);
 
   if (!res.status) {
     return <Loader />;
