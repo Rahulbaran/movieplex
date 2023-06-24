@@ -8,7 +8,7 @@ import useMeta from "../../hooks/useMeta";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-export default function Movies() {
+export default function PopularMovies() {
   useMeta({ title: "Movies | Movieplex", description: "" });
 
   const [page, setPage] = useState(1);
@@ -37,9 +37,7 @@ export default function Movies() {
     fetchMovies();
   }, [page, initialRender]);
 
-  const loadMovies = () => {
-    setPage(prevPage => prevPage + 1);
-  };
+  const loadMovies = () => setPage(prevPage => prevPage + 1);
 
   if (!res.status) {
     return <Loader />;
