@@ -18,6 +18,10 @@
     transition: opacity 500ms ease-in, scale 350ms ease-in;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:hover::before {
     opacity: 0;
     scale: 1.125 1.35;
