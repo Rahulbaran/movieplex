@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-
 // Hooks
 import useMeta from "../../hooks/useMeta";
+import useFetchShows from "../../hooks/useFetchShows";
 
 // Components
 import Loader from "../../components/Loader";
@@ -10,33 +8,7 @@ import Card from "../../components/Card";
 
 export default function PopularShows() {
   useMeta({ title: "TVShows | Movieplex", description: "" });
-
-  const [page, setPage] = useState(1);
-  const [res, setRes] = useState({ status: "", shows: [] });
-  const [initialRender, setInitialRender] = useState(true);
-
-  useEffect(() => {
-    if (initialRender) {
-      setInitialRender(false);
-      return;
-    }
-    const fetchShows = async () => {
-      try {
-        const response = await axios(
-          `/.netlify/functions/getShows?page=${page}`
-        );
-        setRes(prev => ({
-          status: "success",
-          shows: [...prev.shows, ...response.data.shows.results]
-        }));
-      } catch (error) {
-        setRes({ status: "fail", error });
-      }
-    };
-    fetchShows();
-  }, [page, initialRender]);
-
-  const loadShows = () => setPage(prevPage => prevPage + 1);
+  const [res, loadShows] = useFetchShows();
 
   if (!res.status) {
     return <Loader />;

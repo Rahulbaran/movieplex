@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 // Hooks
 import useMeta from "../../hooks/useMeta";
+import useFetchShows from "../../hooks/useFetchShows";
 
 // Components
 import Loader from "../../components/Loader";
@@ -14,16 +14,13 @@ import { modifyTitle } from "../../utils/modifyTitle";
 
 export default function Shows() {
   const curType = useParams().type;
-
   useMeta({
     title: `${modifyTitle(curType)} Shows | Movieplex`,
     description: ""
   });
 
-  const [page, setPage] = useState(1);
   const [type, setType] = useState(curType);
-  const [res, setRes] = useState({ status: "", shows: [] });
-  const [initialRender, setInitialRender] = useState(true);
+  const [res, loadShows, setRes, setPage] = useFetchShows(type);
 
   useEffect(() => {
     if (type !== curType) {
@@ -31,30 +28,7 @@ export default function Shows() {
       setRes({ status: "", shows: [] });
       setPage(1);
     }
-  }, [type, curType]);
-
-  useEffect(() => {
-    if (initialRender) {
-      setInitialRender(false);
-      return;
-    }
-    const fetchShows = async () => {
-      try {
-        const response = await axios(
-          `/.netlify/functions/getShows?page=${page}&type=${type}`
-        );
-        setRes(prev => ({
-          status: "success",
-          shows: [...prev.shows, ...response.data.shows.results]
-        }));
-      } catch (error) {
-        setRes({ status: "fail", error });
-      }
-    };
-    fetchShows();
-  }, [page, type, initialRender]);
-
-  const loadShows = () => setPage(prevPage => prevPage + 1);
+  }, [type, setRes, setPage, curType]);
 
   if (!res.status) {
     return <Loader />;
