@@ -47,7 +47,7 @@ body {
   --navigation-width: 0;
 
   position: relative;
-  min-block-size: 100vh;
+  min-block-size: 100dvh;
 
   > .navigation-container {
     position: fixed;
@@ -76,6 +76,6 @@ body {
 
 .container {
   width: 100%;
-  block-size: 100vh;
+  block-size: 100dvh;
   overflow-x: hidden;
 }
