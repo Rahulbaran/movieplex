@@ -23,3 +23,29 @@
     block-size: 175px;
   }
 }
+
+.shows-navigation {
+  background-color: var(--nav-container-bg);
+
+  ul {
+    list-style-type: none;
+    padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 3);
+    display: flex;
+    gap: calc(var(--base-gap) * 3);
+    align-items: center;
+
+    a {
+      font-size: calc(var(--base-fs) * 1.2);
+
+      &.active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @media screen and (width > 768px) {
+    ul a {
+      font-size: calc(var(--base-fs) * 1.1);
+    }
+  }
+}

@@ -24,14 +24,44 @@
   }
 }
 
-.movies-navigation ul {
-  list-style-type: none;
-  padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 3);
-  display: flex;
-  gap: calc(var(--base-gap) * 2);
-  align-items: center;
+.movies-navigation {
+  background-color: var(--nav-container-bg);
 
-  a.active {
-    opacity: 0.6;
+  ul {
+    list-style-type: none;
+    padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 3);
+    display: flex;
+    gap: calc(var(--base-gap) * 3);
+    align-items: center;
+
+    a {
+      font-size: calc(var(--base-fs) * 1.2);
+
+      &.active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @media screen and (width > 768px) {
+    ul a {
+      font-size: calc(var(--base-fs) * 1.1);
+    }
+  }
+}
+
+.movies-container {
+  .cards {
+    padding: calc(var(--base-padding) * 8) calc(var(--base-padding) * 3) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    grid-template-rows: auto;
+    gap: calc(var(--base-gap) * 4);
+  }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-block: calc(var(--base-margin) * 10);
   }
 }
