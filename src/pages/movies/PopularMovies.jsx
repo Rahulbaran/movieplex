@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 // Hooks
-import useMeta from "../hooks/useMeta";
+import useMeta from "../../hooks/useMeta";
 
 // Components
-import Loader from "../components/Loader";
+import Loader from "../../components/Loader";
+import Card from "../../components/Card";
 
 export default function Movies() {
   useMeta({ title: "Movies | Movieplex", description: "" });
@@ -33,6 +33,7 @@ export default function Movies() {
         setRes({ status: "fail", error });
       }
     };
+
     fetchMovies();
   }, [page, initialRender]);
 
@@ -53,23 +54,17 @@ export default function Movies() {
 
   return (
     <>
-      <header className="movies-header">
-        <h1>Movies</h1>
-      </header>
+      <section className="cards">
+        {res.movies.map(movie => (
+          <Card data={movie} key={movie.id} />
+        ))}
+      </section>
 
-      <nav className="movies-navigation">
-        <ul>
-          <li>
-            <NavLink to="/movies/popular">Popular</NavLink>
-          </li>
-          <li>
-            <NavLink to="/movies/trending">Trending</NavLink>
-          </li>
-          <li>
-            <NavLink to="/movies/top_rated">Top rated</NavLink>
-          </li>
-        </ul>
-      </nav>
+      <section className="load-more-container">
+        <button className="btn btn-primary" onClick={loadMovies}>
+          Load more
+        </button>
+      </section>
     </>
   );
 }

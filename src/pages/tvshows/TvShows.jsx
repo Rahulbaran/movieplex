@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Hooks
-import useMeta from "../hooks/useMeta";
+import useMeta from "../../hooks/useMeta";
 
 // Components
-import Loader from "../components/Loader";
+import Loader from "../../components/Loader";
 
 export default function TvShows() {
   useMeta({ title: "TvShows | Movieplex", description: "" });
@@ -52,9 +52,7 @@ export default function TvShows() {
 
   return (
     <>
-      <header className="shows-header">
-        <h1>TV Shows</h1>
-      </header>
+     
     </>
   );
 }
