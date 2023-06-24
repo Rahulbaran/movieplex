@@ -2,6 +2,12 @@
   background-color: var(--nav-container-bg);
   box-shadow: var(--x-offset, 0) var(--y-offset, -5px) 15px
     oklch(20% 0.1 var(--hue) / 0.2);
+  border-top: 1px solid var(--nav-border);
+
+  @media screen and (width > 768px) {
+    border: none;
+    border-inline-end: 1px solid var(--nav-border);
+  }
 }
 
 .logo-container,

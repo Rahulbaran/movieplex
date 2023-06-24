@@ -11,7 +11,7 @@
     url("/posters/movie-poster.webp");
   background-position: center;
   background-repeat: no-repeat;
-  padding-inline: calc(var(--base-padding) * 3);
+  padding-inline: calc(var(--base-padding) * 4);
 
   h1 {
     font-size: calc(var(--base-fs) * 3);
@@ -21,15 +21,17 @@
 
   @media screen and (width > 992px) {
     block-size: 175px;
+    padding-inline: calc(var(--base-padding) * 3);
   }
 }
 
 .movies-navigation {
   background-color: var(--nav-container-bg);
+  border-block: 1px solid var(--nav-border);
 
   ul {
     list-style-type: none;
-    padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 3);
+    padding: calc(var(--base-padding) * 2) calc(var(--base-padding) * 4);
     display: flex;
     gap: calc(var(--base-gap) * 3);
     align-items: center;
@@ -44,6 +46,10 @@
   }
 
   @media screen and (width > 768px) {
+    ul {
+      padding-inline: calc(var(--base-padding) * 3);
+    }
+
     ul a {
       font-size: calc(var(--base-fs) * 1.1);
     }
@@ -52,7 +58,7 @@
 
 .movies-container {
   .cards {
-    padding: calc(var(--base-padding) * 8) calc(var(--base-padding) * 3) 0;
+    padding: calc(var(--base-padding) * 5) calc(var(--base-padding) * 4) 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     grid-template-rows: auto;
@@ -63,5 +69,11 @@
     display: flex;
     justify-content: center;
     margin-block: calc(var(--base-margin) * 10);
+  }
+
+  @media screen and (width > 768px) {
+    .cards {
+      padding-inline: calc(var(--base-padding) * 3);
+    }
   }
 }
