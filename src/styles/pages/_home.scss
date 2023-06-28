@@ -32,6 +32,7 @@
         font-size: calc(var(--base-fs) * 3);
         line-height: calc(var(--base-lh) * 0.75);
         text-shadow: 10px 5px 10px oklch(5% 0.05 200 / 0.8);
+        text-wrap: balance;
       }
 
       p {
