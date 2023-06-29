@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import useMeta from "../hooks/useMeta";
+import useMeta from "../../hooks/useMeta";
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState({ title: "Random movie", overview: "" });
