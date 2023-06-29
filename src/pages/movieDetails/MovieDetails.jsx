@@ -1,17 +1,38 @@
-import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-import useMeta from "../../hooks/useMeta";
+// Custom Hooks
+import useFetch from "../../hooks/useFetch";
+
+// Components
+import MoviePoster from "./MoviePoster";
+import Casts from "./Casts";
+import Details from "./Details";
+import SimilarMovies from "./SimilarMovies";
+import Loader from "../../components/Loader";
 
 export default function MovieDetails() {
-  const [movie, setMovie] = useState({ title: "Random movie", overview: "" });
-  useMeta({
-    title: `${movie.title} | Movieplex`,
-    description: movie.overview.slice(0, 140)
-  });
+  const { id: movie_id } = useParams();
+  const res = useFetch(
+    `/.netlify/functions/getMovieDetails?movie_id=${movie_id}`
+  );
+
+  if (!res.status) {
+    return <Loader />;
+  } else if (res.status === "fail") {
+    return (
+      <main className="container error-container">
+        <h1>{res.error.message}</h1>
+        <p>Try again after sometimes</p>
+      </main>
+    );
+  }
 
   return (
     <main className="container movie-details-container">
-      <h1>Movie Details Container</h1>
+      <MoviePoster movie={res.movieInfo} />
+      <Casts />
+      <Details />
+      <SimilarMovies />
     </main>
   );
 }
