@@ -36,11 +36,11 @@
     align-items: center;
 
     svg {
-      font-size: calc(var(--base-fs) * 1.6);
+      font-size: calc(var(--base-fs) * 1.75);
     }
 
     span:first-of-type {
-      font-size: calc(var(--base-fs) * 1.2);
+      font-size: calc(var(--base-fs) * 1.25);
     }
 
     :last-child {
