@@ -1,0 +1,83 @@
+.movies-poster-section {
+  block-size: 100dvh;
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--base-gap) * 5);
+  padding-inline: calc(var(--base-padding) * 5);
+
+  .movie-image-container {
+    display: none;
+
+    img {
+      border-radius: calc(var(--base-br) * 0.75);
+      box-shadow: 0 8px 13px oklch(30% 0.2 200 / 0.3);
+    }
+  }
+
+  .movie-content {
+    display: flex;
+    gap: calc(var(--base-gap) * 2);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movie-title {
+    font-size: calc(var(--base-fs) * 3);
+    line-height: calc(var(--base-lh) * 0.75);
+    text-shadow: 10px 5px 10px oklch(5% 0.05 200 / 0.8);
+    text-wrap: balance;
+  }
+
+  .movie-rating {
+    display: flex;
+    gap: calc(var(--base-gap) * 0.75);
+    align-items: center;
+
+    svg {
+      font-size: calc(var(--base-fs) * 1.5);
+    }
+
+    :last-child {
+      font-size: calc(var(--base-fs) * 0.9);
+      color: var(--text-3);
+    }
+  }
+
+  .movie-genres {
+    display: flex;
+    gap: calc(var(--base-gap) * 2);
+    flex-wrap: wrap;
+  }
+
+  .movie-genre {
+    font-size: calc(var(--base-fs) * 0.9);
+    color: var(--text-1);
+    padding: calc(var(--base-padding) * 0.5) calc(var(--base-padding) * 2);
+    border-radius: calc(var(--base-br) * 1);
+    border: 1px solid currentcolor;
+  }
+
+  .movie-description {
+    margin-block-end: calc(var(--base-margin) * 2);
+  }
+
+  @media screen and (width > 768px) {
+    padding-inline: calc(var(--base-padding) * 3);
+
+    .movie-description {
+      font-size: calc(var(--base-fs) * 0.95);
+    }
+
+    .movie-genre {
+      font-size: calc(var(--base-fs) * 0.8);
+    }
+  }
+
+  @media screen and (width > 992px) {
+    .movie-image-container {
+      display: block;
+    }
+  }
+}
