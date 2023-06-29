@@ -11,7 +11,11 @@ const Movies = lazy(() => import("./Movies"));
 const Shows = lazy(() => import("./Shows"));
 
 export default function Home() {
-  useMeta({ title: "Home | Movieplex", description: "" });
+  useMeta({
+    title: "Home | Movieplex",
+    description:
+      "Discover a world of movies and TV shows with our movie app powered by the TMDB API. Explore popular and top-rated movies and TV shows, search for your favorites, and delve into detailed information and reviews. Enjoy endless entertainment at your fingertips"
+  });
   const res = useFetch("/.netlify/functions/getMoviesAndShows");
 
   if (!res.status) {
