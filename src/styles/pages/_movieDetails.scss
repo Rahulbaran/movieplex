@@ -36,11 +36,15 @@
     align-items: center;
 
     svg {
-      font-size: calc(var(--base-fs) * 1.5);
+      font-size: calc(var(--base-fs) * 1.6);
+    }
+
+    span:first-of-type {
+      font-size: calc(var(--base-fs) * 1.2);
     }
 
     :last-child {
-      font-size: calc(var(--base-fs) * 0.9);
+      font-size: var(--base-fs);
       color: var(--text-3);
     }
   }
@@ -52,7 +56,6 @@
   }
 
   .movie-genre {
-    font-size: calc(var(--base-fs) * 0.9);
     color: var(--text-1);
     padding: calc(var(--base-padding) * 0.5) calc(var(--base-padding) * 2);
     border-radius: calc(var(--base-br) * 1);
@@ -61,6 +64,7 @@
 
   .movie-description {
     margin-block-end: calc(var(--base-margin) * 2);
+    font-size: calc(var(--base-fs) * 1.2);
   }
 
   @media screen and (width > 768px) {
