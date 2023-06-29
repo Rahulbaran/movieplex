@@ -67,6 +67,12 @@
     font-size: calc(var(--base-fs) * 1.2);
   }
 
+  @media screen and (width <= 768px) {
+    .movie-trailer {
+      font-size: calc(var(--base-fs) * 1.3);
+    }
+  }
+
   @media screen and (width > 768px) {
     padding-inline: calc(var(--base-padding) * 3);
 
