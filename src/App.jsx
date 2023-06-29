@@ -14,7 +14,7 @@ import TvShowsLayout from "./layouts/TvShowsLayout";
 import Home from "./pages/home/Home";
 import Movies from "./pages/movies/Movies";
 import PopularMovies from "./pages/movies/PopularMovies";
-import MovieDetails from "./pages/MovieDetails";
+import MovieDetails from "./pages/movieDetails/MovieDetails";
 import TvShows from "./pages/tvshows/TvShows";
 import PopularShows from "./pages/tvshows/PopularShows";
 import TvShowDetails from "./pages/TvShowDetails";
