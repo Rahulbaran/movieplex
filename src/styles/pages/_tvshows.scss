@@ -11,7 +11,7 @@
     url("/posters/tvshow-poster.webp");
   background-position: center;
   background-repeat: no-repeat;
-  padding-inline: calc(var(--base-padding) * 4);
+  padding-inline: calc(var(--base-padding) * 5);
 
   h1 {
     font-size: calc(var(--base-fs) * 3);
@@ -19,7 +19,7 @@
     letter-spacing: 1px;
   }
 
-  @media screen and (width > 992px) {
+  @media screen and (width > 768px) {
     block-size: 175px;
     padding-inline: calc(var(--base-padding) * 3);
   }
