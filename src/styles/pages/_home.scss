@@ -36,8 +36,8 @@
       }
 
       p {
-        color: var(--text-1);
         font-weight: var(--fw-light);
+        font-size: calc(var(--base-fs) * 0.95);
       }
     }
 

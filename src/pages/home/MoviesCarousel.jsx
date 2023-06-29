@@ -21,7 +21,7 @@ export default function MoviesCarousel({ movies }) {
           <SwiperSlide
             key={movie.id}
             style={{
-              backgroundImage: `linear-gradient(to top, oklch(2% .05 200 / .85), oklch(10% 0.05 200 / .6)), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
+              backgroundImage: `linear-gradient(to top, oklch(2% .05 200 / .9), oklch(10% 0.05 200 / .6)), url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center"
