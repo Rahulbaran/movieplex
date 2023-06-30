@@ -49,8 +49,8 @@ export default function MoviesCarousel({ movies }) {
                 alt={movie.title}
                 loading="lazy"
                 decoding="async"
-                width="350"
-                height="480"
+                width="380"
+                height="550"
               />
             </div>
           </SwiperSlide>
