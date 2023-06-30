@@ -30,7 +30,7 @@ export default function MovieDetails() {
   return (
     <main className="container movie-details-container">
       <MoviePoster movie={res} />
-      <Casts />
+      <Casts casts={res.casts} />
       <Details />
       <SimilarMovies />
     </main>
