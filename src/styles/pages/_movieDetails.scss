@@ -1,3 +1,28 @@
+.movie-details-container {
+  h2 {
+    font-size: calc(var(--base-fs) * 1.8);
+    margin-block-end: calc(var(--base-margin) * 2);
+    margin-inline-start: var(--base-margin);
+    font-weight: var(--fw-medium);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      margin-inline-start: -0.5em;
+      width: 0.15em;
+      background-color: var(--text-3);
+    }
+  }
+
+  hr {
+    border-color: oklch(5% 0.05 var(--hue));
+    border-width: 0.1px;
+  }
+}
+
+// Movie Poster Section
 .movies-poster-section {
   block-size: 100dvh;
   inline-size: 100%;
@@ -88,6 +113,124 @@
   @media screen and (width > 992px) {
     .movie-image-container {
       display: block;
+    }
+  }
+}
+
+// Movie Casts Section
+.casts-section {
+  padding-inline: calc(var(--base-padding) * 5);
+  padding-block: calc(var(--base-padding) * 8);
+
+  .casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    gap: calc(var(--base-gap) * 4);
+    padding-block: calc(var(--base-padding) * 2);
+  }
+
+  .cast {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--base-gap) calc(var(--base-gap) * 4);
+
+    &-avatar {
+      inline-size: 100px;
+      block-size: 100px;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 20px oklch(25% 0.1 var(--hue) / 0.9);
+      }
+    }
+
+    &-info {
+      text-align: center;
+
+      h5 {
+        font-weight: var(--fw-medium);
+        font-size: calc(var(--base-fs) * 1.2);
+        line-height: calc(var(--base-lh) * 0.75);
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      span {
+        margin-block-start: calc(var(--base-margin) * 0.25);
+      }
+    }
+  }
+
+  .directors,
+  .writers {
+    p {
+      padding-block: calc(var(--base-padding) * 0.25);
+    }
+
+    :is(span, strong) {
+      font-size: calc(var(--base-fs) * 1.2);
+    }
+
+    strong {
+      font-weight: var(--fw-medium);
+    }
+  }
+
+  @media screen and (width > 768px) {
+    padding-inline: calc(var(--base-padding) * 3);
+
+    .casts {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: start;
+    }
+
+    .cast {
+      flex-direction: row;
+    }
+
+    .cast-avatar {
+      inline-size: 90px;
+      block-size: 90px;
+    }
+
+    .cast-info {
+      text-align: start;
+
+      h5 {
+        font-size: var(--base-fs);
+      }
+
+      span {
+        font-size: calc(var(--base-fs) * 0.95);
+      }
+    }
+
+    .directors,
+    .writers {
+      :is(span, strong) {
+        font-size: calc(var(--base-fs) * 0.9);
+      }
+    }
+  }
+
+  @media screen and (width > 1279px) {
+    .casts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cast-info {
+      h5 {
+        font-size: calc(var(--base-fs) * 0.85);
+      }
+
+      span {
+        font-size: calc(var(--base-fs) * 0.8);
+      }
     }
   }
 }
