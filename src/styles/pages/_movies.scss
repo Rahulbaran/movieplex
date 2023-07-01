@@ -58,7 +58,7 @@
 
 .movies-container {
   .cards {
-    padding: calc(var(--base-padding) * 5) calc(var(--base-padding) * 4) 0;
+    padding: calc(var(--base-padding) * 5) calc(var(--base-padding) * 5) 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     grid-template-rows: auto;
