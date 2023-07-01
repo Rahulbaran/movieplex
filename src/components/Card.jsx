@@ -22,7 +22,7 @@ export default function Card({ data }) {
       >
         <div className="rating">
           <MdStar />
-          <span>{data.vote_average}</span>
+          <span>{data.vote_average.toFixed(1)}</span>
         </div>
         <h4>{data.title ? data.title : data.name}</h4>
         <p>{`${data.overview.slice(0, 150)}...`}</p>
