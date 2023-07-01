@@ -32,7 +32,7 @@ export default function MovieDetails() {
       <MoviePoster movie={res} />
       <Casts casts={res.casts} />
       <Details res={res} />
-      <SimilarMovies />
+      <SimilarMovies movies={res.similar_movies} />
     </main>
   );
 }
