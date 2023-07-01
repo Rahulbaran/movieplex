@@ -54,7 +54,7 @@ export default function MoviePoster({ movie }) {
           href={`https://www.youtube.com/watch?v=${
             movie.videos.filter(video => video.type === "Trailer").at(-1).key
           }`}
-          className="btn btn-primary movie-trailer"
+          className="btn btn-primary"
           rel="noopener noreferrer"
           target="_blank"
         >
