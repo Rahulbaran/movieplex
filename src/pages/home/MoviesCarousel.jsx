@@ -7,7 +7,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
+// Hooks
+import use3dAnimation from "../../hooks/use3dAnimation";
+
 export default function MoviesCarousel({ movies }) {
+  const { animateCard, removeAnimation } = use3dAnimation();
+
   return (
     <Swiper
       modules={[Pagination, A11y, Autoplay]}
@@ -51,6 +56,8 @@ export default function MoviesCarousel({ movies }) {
                 decoding="async"
                 width="380"
                 height="550"
+                onMouseMove={animateCard}
+                onMouseOut={removeAnimation}
               />
             </div>
           </SwiperSlide>
