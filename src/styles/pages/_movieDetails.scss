@@ -2,7 +2,7 @@
   h2 {
     font-size: calc(var(--base-fs) * 1.8);
     margin-block-end: calc(var(--base-margin) * 2);
-    margin-inline-start: var(--base-margin);
+    margin-inline-start: calc(var(--base-margin) * 1.2);
     font-weight: var(--fw-medium);
     position: relative;
 
@@ -10,7 +10,7 @@
       content: "";
       position: absolute;
       inset-block: 0;
-      margin-inline-start: -0.5em;
+      margin-inline-start: -0.6em;
       width: 0.15em;
       background-color: var(--text-3);
     }
