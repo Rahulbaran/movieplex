@@ -1,4 +1,13 @@
 .movie-details-container {
+  .movie-section {
+    padding-inline: calc(var(--base-padding) * 5);
+    margin-block: calc(var(--base-margin) * 10);
+
+    @media screen and (width > 768px) {
+      padding-inline: calc(var(--base-padding) * 3);
+    }
+  }
+
   h2 {
     font-size: calc(var(--base-fs) * 2);
     margin-block-end: calc(var(--base-margin) * 2);
@@ -140,9 +149,6 @@
 
 // Movie Casts Section
 .casts-section {
-  padding-inline: calc(var(--base-padding) * 5);
-  margin-block: calc(var(--base-margin) * 8);
-
   .casts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -188,8 +194,6 @@
   }
 
   @media screen and (width > 768px) {
-    padding-inline: calc(var(--base-padding) * 3);
-
     .casts {
       grid-template-columns: repeat(2, 1fr);
       justify-items: start;
@@ -236,14 +240,20 @@
 
 // Details Section
 .details-section {
-  padding-inline: calc(var(--base-padding) * 5);
-  margin-block-end: calc(var(--base-margin) * 8);
-
   .movie-general-details {
-    padding-block: calc(var(--base-padding) * 2.5);
+    padding-block-start: calc(var(--base-padding) * 2.5);
   }
+}
+
+// Similar Movies Section
+.similar-movies {
+  padding-block-start: calc(var(--base-padding) * 2.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-template-rows: auto;
+  gap: calc(var(--base-gap) * 4);
 
   @media screen and (width > 768px) {
-    padding-inline: calc(var(--base-padding) * 3);
+    gap: calc(var(--base-gap) * 3);
   }
 }
