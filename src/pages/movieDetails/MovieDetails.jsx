@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 
 // Custom Hooks
@@ -7,7 +8,7 @@ import useFetch from "../../hooks/useFetch";
 import MoviePoster from "./MoviePoster";
 import Casts from "./Casts";
 import Details from "./Details";
-import SimilarMovies from "./SimilarMovies";
+const SimilarMovies = lazy(() => import("./SimilarMovies"));
 import Loader from "../../components/Loader";
 
 export default function MovieDetails() {
@@ -32,7 +33,10 @@ export default function MovieDetails() {
       <MoviePoster movie={res} />
       <Casts casts={res.casts} />
       <Details res={res} />
-      <SimilarMovies movies={res.similar_movies} />
+
+      <Suspense fallback={<Loader />}>
+        <SimilarMovies movies={res.similar_movies} />
+      </Suspense>
     </main>
   );
 }
