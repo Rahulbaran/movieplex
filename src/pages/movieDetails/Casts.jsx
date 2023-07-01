@@ -8,7 +8,7 @@ export default function Casts({ casts }) {
   );
 
   return (
-    <section className="casts-section">
+    <section className="movie-section casts-section">
       <h2 className="casts-heading">Top Casts</h2>
 
       <div className="casts">

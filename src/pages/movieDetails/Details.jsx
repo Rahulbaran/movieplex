@@ -11,7 +11,7 @@ export default function Details({ res }) {
   } = res.movieInfo;
 
   return (
-    <section className="details-section">
+    <section className="movie-section details-section">
       <h2>More Details</h2>
 
       <div className="movie-general-details">
