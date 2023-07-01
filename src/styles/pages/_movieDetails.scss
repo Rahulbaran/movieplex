@@ -169,11 +169,11 @@
   .directors,
   .writers {
     p {
-      padding-block: calc(var(--base-padding) * 0.25);
+      padding-block: calc(var(--base-padding) * 0.5);
     }
 
     :is(span, strong) {
-      font-size: calc(var(--base-fs) * 1.2);
+      font-size: calc(var(--base-fs) * 1.3);
     }
 
     strong {
