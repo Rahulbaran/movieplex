@@ -38,7 +38,7 @@
   }
 
   hr {
-    border-color: oklch(5% 0.05 var(--hue) / 0.4);
+    border-color: oklch(5% 0.05 var(--hue) / 0.75);
     border-width: 0.1px;
   }
 }
