@@ -21,7 +21,7 @@ export default function Casts({ casts }) {
                 loading="lazy"
                 decoding="async"
                 width="100"
-                height="135"
+                height="100"
               />
             </div>
             <div className="cast-info">
