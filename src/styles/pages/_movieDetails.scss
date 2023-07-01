@@ -1,9 +1,9 @@
 .movie-details-container {
   h2 {
-    font-size: calc(var(--base-fs) * 1.8);
+    font-size: calc(var(--base-fs) * 2);
     margin-block-end: calc(var(--base-margin) * 2);
     margin-inline-start: calc(var(--base-margin) * 1.2);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semi);
     position: relative;
 
     &::before {
@@ -11,7 +11,7 @@
       position: absolute;
       inset-block: 0;
       margin-inline-start: -0.6em;
-      width: 0.15em;
+      width: 0.175em;
       background-color: var(--text-3);
     }
   }
