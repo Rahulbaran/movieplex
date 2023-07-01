@@ -36,11 +36,12 @@ export default function Casts({ casts }) {
         <>
           <hr />
           <div className="writers">
-            <p>
-              <strong>{writers.length === 1 ? "Writer" : "Writers"} - </strong>
+            <p className="movie-info-para">
+              <strong>{writers.length === 1 ? "Writer" : "Writers"}</strong>
               <span>{writers.map(writer => writer.name).join(", ")}</span>
             </p>
           </div>
+          {directors.length === 0 && <hr />}
         </>
       )}
 
@@ -48,13 +49,14 @@ export default function Casts({ casts }) {
         <>
           <hr />
           <div className="directors">
-            <p>
+            <p className="movie-info-para">
               <strong>
-                {directors.length === 1 ? "Director" : "Directors"} -{" "}
+                {directors.length === 1 ? "Director" : "Directors"}
               </strong>
               <span>{directors.map(director => director.name).join(", ")}</span>
             </p>
           </div>
+          <hr />
         </>
       )}
     </section>
