@@ -64,10 +64,12 @@
 
   .movie-image-container {
     display: none;
+    transform-origin: preserve-3d;
 
     img {
       border-radius: calc(var(--base-br) * 0.75);
       box-shadow: 0 8px 13px oklch(30% 0.2 200 / 0.3);
+      transition: transform 100ms ease-out;
     }
   }
 

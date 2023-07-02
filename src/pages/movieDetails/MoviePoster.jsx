@@ -2,12 +2,15 @@ import { MdStar } from "react-icons/md";
 
 // Custom Hooks
 import useMeta from "../../hooks/useMeta";
+import use3dAnimation from "../../hooks/use3dAnimation";
 
 export default function MoviePoster({ movie }) {
   useMeta({
     title: `${movie.movieInfo.title} | Movieplex`,
     description: movie.movieInfo.overview.trim().slice(0, 160)
   });
+
+  const { animateCard, removeAnimation } = use3dAnimation();
 
   return (
     <section
@@ -28,6 +31,8 @@ export default function MoviePoster({ movie }) {
           decoding="async"
           width="380"
           height="550"
+          onMouseMove={animateCard}
+          onMouseOut={removeAnimation}
         />
       </div>
 
