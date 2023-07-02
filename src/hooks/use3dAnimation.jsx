@@ -3,8 +3,8 @@ export default function use3dAnimation() {
     const { clientWidth: cardWidth, clientHeight: cardHeight } = e.target;
     const { screenX: pointerX, screenY: pointerY } = e;
 
-    const xRotation = 25 * Math.sin((pointerX - cardWidth / 1.5) / cardWidth);
-    const yRotation = 25 * Math.sin((pointerY - cardHeight / 1.5) / cardHeight);
+    const xRotation = 15 * ((pointerX - cardWidth / 2) / cardWidth);
+    const yRotation = 15 * ((pointerY - cardHeight / 2) / cardHeight);
     e.target.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
   };
 
