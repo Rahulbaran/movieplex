@@ -36,9 +36,10 @@
     transition: clip-path 300ms ease 50ms;
 
     h4 {
-      font-size: calc(var(--base-fs) * 1.25);
+      font-size: calc(var(--base-fs) * 1.3);
       line-height: calc(var(--base-lh) * 0.8);
       font-weight: var(--fw-medium);
+      text-wrap: balance;
     }
 
     p {
