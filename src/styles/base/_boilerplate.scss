@@ -46,6 +46,7 @@ body {
 
 .app-wrapper {
   position: relative;
+  min-block-size: 100dvh;
 
   > .navigation-container {
     position: fixed;
@@ -73,7 +74,6 @@ body {
 }
 
 .container {
-  width: 100%;
   block-size: 100dvh;
   overflow-x: hidden;
 }
