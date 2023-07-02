@@ -3,7 +3,7 @@
   height: 350px;
   position: relative;
   border-radius: calc(var(--base-br) * 0.25);
-  transition: opacity 200ms ease, scale 200ms ease, translate 200ms ease;
+  transition: scale 300ms ease, translate 300ms ease;
 
   &-header img {
     width: 100%;
@@ -33,7 +33,7 @@
       100% 100%,
       0 100%
     );
-    transition: clip-path 200ms ease;
+    transition: clip-path 300ms ease 50ms;
 
     h4 {
       font-size: calc(var(--base-fs) * 1.25);
