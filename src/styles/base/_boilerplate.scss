@@ -45,10 +45,7 @@ body {
 }
 
 .app-wrapper {
-  --navigation-width: 0;
-
   position: relative;
-  min-block-size: 100dvh;
 
   > .navigation-container {
     position: fixed;
