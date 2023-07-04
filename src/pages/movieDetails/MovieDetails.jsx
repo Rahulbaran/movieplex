@@ -35,7 +35,8 @@ export default function MovieDetails() {
       <Details res={res} />
 
       <Suspense fallback={<Loader />}>
-        <SimilarMovies movies={res.similar_movies} />
+        {res.similar_movies.length > 0 && <SimilarMovies movies={res.similar_movies} />}
+        
       </Suspense>
     </main>
   );
