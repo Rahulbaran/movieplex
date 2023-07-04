@@ -54,7 +54,8 @@ export default function Details({ res }) {
           <p className="movie-info-para">
             <strong>Production companies</strong>
             <span>
-              {production_companies.map(comp => comp.name).join(", ")}
+              {production_companies.map(comp => comp.name).join(", ") ||
+                "<Data not available>"}
             </span>
           </p>
         </div>
