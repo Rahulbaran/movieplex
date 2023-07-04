@@ -3,23 +3,14 @@ import useMeta from "../../hooks/useMeta";
 import useFetchMovies from "../../hooks/useFetchMovies";
 
 // Components
-import Loader from "../../components/Loader";
 import Card from "../../components/Card";
+import InitialLoader from "../../components/InitialLoader";
 
 export default function PopularMovies() {
   useMeta({ title: "Movies | Movieplex", description: "" });
   const [res, loadMovies] = useFetchMovies();
 
-  if (!res.status) {
-    return <Loader />;
-  } else if (res.status === "fail") {
-    return (
-      <section className="container error-container">
-        <h1>{res.error.message}</h1>
-        <p>Try again after sometimes</p>
-      </section>
-    );
-  }
+  if (res.status !== "success") return <InitialLoader />;
 
   return (
     <>

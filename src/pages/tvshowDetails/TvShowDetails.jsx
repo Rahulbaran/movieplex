@@ -1,8 +1,12 @@
+// Page Components
 import TvShowPoster from "./TvShowPoster";
 import Casts from "./Casts";
 import MoreDetails from "./MoreDetails";
 import SimilarTvShows from "./SimilarTvShows";
 
+// Other Components
+
+// Custom Hooks
 import useMeta from "../../hooks/useMeta";
 
 export default function TvShowDetails() {

@@ -5,6 +5,7 @@ import useMeta from "../../hooks/useMeta";
 import useFetch from "../../hooks/useFetch";
 
 import Loader from "../../components/Loader";
+import InitialLoader from "../../components/InitialLoader";
 import MoviesCarousel from "./MoviesCarousel";
 
 const Movies = lazy(() => import("./Movies"));
@@ -18,16 +19,7 @@ export default function Home() {
   });
   const res = useFetch("/.netlify/functions/getMoviesAndShows");
 
-  if (!res.status) {
-    return <Loader />;
-  } else if (res.status === "fail") {
-    return (
-      <main className="container error-container">
-        <h1>{res.error.message}</h1>
-        <p>Try again after sometimes</p>
-      </main>
-    );
-  }
+  if (res.status !== "success") return <InitialLoader />;
 
   return (
     <main className="container home-container">

@@ -4,12 +4,15 @@ import { useParams } from "react-router-dom";
 // Custom Hooks
 import useFetch from "../../hooks/useFetch";
 
-// Components
+// Page Components
 import MoviePoster from "./MoviePoster";
 import Casts from "./Casts";
 import Details from "./Details";
 const SimilarMovies = lazy(() => import("./SimilarMovies"));
+
+// Other Components
 import Loader from "../../components/Loader";
+import InitialLoader from "../../components/InitialLoader";
 
 export default function MovieDetails() {
   const { id: movie_id } = useParams();
@@ -17,16 +20,7 @@ export default function MovieDetails() {
     `/.netlify/functions/getMovieDetails?movie_id=${movie_id}`
   );
 
-  if (!res.status) {
-    return <Loader />;
-  } else if (res.status === "fail") {
-    return (
-      <main className="container error-container">
-        <h1>{res.error.message}</h1>
-        <p>Try again after sometimes</p>
-      </main>
-    );
-  }
+  if (res.status !== "success") return <InitialLoader />;
 
   return (
     <main className="container movie-details-container">
@@ -35,8 +29,9 @@ export default function MovieDetails() {
       <Details res={res} />
 
       <Suspense fallback={<Loader />}>
-        {res.similar_movies.length > 0 && <SimilarMovies movies={res.similar_movies} />}
-        
+        {res.similar_movies.length > 0 && (
+          <SimilarMovies movies={res.similar_movies} />
+        )}
       </Suspense>
     </main>
   );
