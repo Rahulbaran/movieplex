@@ -14,7 +14,7 @@ export default function MoviePoster({ movie }) {
 
   return (
     <section
-      className="movies-poster-section"
+      className="movie-poster-section"
       style={{
         backgroundImage: `linear-gradient(to top, oklch(2% .05 200 / .8), oklch(10% 0.05 200 / .5)), url(https://image.tmdb.org/t/p/w1280${movie.movieInfo.backdrop_path})`,
         backgroundSize: "cover",
