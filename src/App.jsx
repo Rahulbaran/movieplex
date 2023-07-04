@@ -17,7 +17,7 @@ import PopularMovies from "./pages/movies/PopularMovies";
 import MovieDetails from "./pages/movieDetails/MovieDetails";
 import TvShows from "./pages/tvshows/TvShows";
 import PopularShows from "./pages/tvshows/PopularShows";
-import TvShowDetails from "./pages/TvShowDetails";
+import TvShowDetails from "./pages/tvshowDetails/TvShowDetails";
 import Search from "./pages/Search";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
