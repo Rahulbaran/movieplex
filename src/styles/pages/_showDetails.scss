@@ -1,0 +1,255 @@
+.tvshow-details-container {
+  .tvshow-section {
+    padding-inline: calc(var(--base-padding) * 5);
+    margin-block: calc(var(--base-margin) * 10);
+
+    @media screen and (width > 768px) {
+      padding-inline: calc(var(--base-padding) * 3);
+    }
+  }
+
+  h2 {
+    font-size: calc(var(--base-fs) * 2);
+    margin-block-end: calc(var(--base-margin) * 2);
+    margin-inline-start: calc(var(--base-margin) * 1.2);
+    font-weight: var(--fw-semi);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      margin-inline-start: -0.6em;
+      width: 0.15em;
+      background-color: var(--text-3);
+      border-radius: calc(var(--base-br) * 0.5);
+    }
+  }
+
+  .tvshow-info-para {
+    padding-block: calc(var(--base-padding) * 0.75);
+
+    :is(span, a, strong) {
+      font-size: calc(var(--base-fs) * 1.3);
+    }
+
+    strong {
+      font-weight: var(--fw-medium);
+      color: var(--text-1);
+      margin-inline-end: calc(var(--base-margin) * 2);
+    }
+
+    @media screen and (width > 768px) {
+      :is(span, a, strong) {
+        font-size: calc(var(--base-fs) * 0.9);
+      }
+    }
+  }
+
+  hr {
+    border-color: oklch(5% 0.05 var(--hue) / 0.75);
+    border-width: 0.1px;
+  }
+}
+
+// TvShow Poster Section
+.tvshow-poster-section {
+  block-size: 100dvh;
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--base-gap) * 5);
+  padding-inline: calc(var(--base-padding) * 5);
+
+  .tvshow-image-container {
+    display: none;
+    transform-origin: preserve-3d;
+
+    img {
+      border-radius: calc(var(--base-br) * 0.75);
+      box-shadow: 0 8px 13px oklch(30% 0.2 200 / 0.3);
+      transition: transform 100ms ease-out;
+    }
+  }
+
+  .tvshow-content {
+    display: flex;
+    gap: calc(var(--base-gap) * 2);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tvshow-title {
+    font-size: calc(var(--base-fs) * 3);
+    line-height: calc(var(--base-lh) * 0.75);
+    text-shadow: 10px 5px 10px oklch(5% 0.05 200 / 0.8);
+    text-wrap: balance;
+  }
+
+  .tvshow-rating {
+    display: flex;
+    gap: calc(var(--base-gap) * 0.75);
+    align-items: center;
+
+    svg {
+      font-size: calc(var(--base-fs) * 1.75);
+    }
+
+    span:first-of-type {
+      font-size: calc(var(--base-fs) * 1.25);
+    }
+
+    :last-child {
+      font-size: var(--base-fs);
+      color: var(--text-3);
+    }
+  }
+
+  .tvshow-genres {
+    display: flex;
+    gap: calc(var(--base-gap) * 2);
+    flex-wrap: wrap;
+  }
+
+  .tvshow-genre {
+    color: var(--text-1);
+    padding: calc(var(--base-padding) * 0.5) calc(var(--base-padding) * 2);
+    border-radius: calc(var(--base-br) * 1);
+    border: 1px solid currentcolor;
+  }
+
+  .tvshow-description {
+    margin-block-end: calc(var(--base-margin) * 2);
+    font-size: calc(var(--base-fs) * 1.2);
+  }
+
+  @media screen and (width > 768px) {
+    padding-inline: calc(var(--base-padding) * 3);
+
+    .tvshow-description {
+      font-size: calc(var(--base-fs) * 0.95);
+    }
+
+    .tvshow-genre {
+      font-size: calc(var(--base-fs) * 0.8);
+    }
+  }
+
+  @media screen and (width > 992px) {
+    .tvshow-image-container {
+      display: block;
+    }
+  }
+}
+
+// TvShow Casts Section
+.casts-section {
+  .casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    gap: calc(var(--base-gap) * 4);
+    padding-block: calc(var(--base-padding) * 2.5);
+  }
+
+  .cast {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--base-gap) calc(var(--base-gap) * 4);
+
+    &-avatar {
+      inline-size: 100px;
+      block-size: 100px;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 25px oklch(30% 0.1 var(--hue) / 0.9);
+      }
+    }
+
+    &-info {
+      text-align: center;
+
+      h5 {
+        font-weight: var(--fw-medium);
+        font-size: calc(var(--base-fs) * 1.2);
+        line-height: calc(var(--base-lh) * 0.75);
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      span {
+        margin-block-start: calc(var(--base-margin) * 0.25);
+      }
+    }
+  }
+
+  @media screen and (width > 768px) {
+    .casts {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: start;
+    }
+
+    .cast {
+      flex-direction: row;
+    }
+
+    .cast-avatar {
+      inline-size: 90px;
+      block-size: 90px;
+    }
+
+    .cast-info {
+      text-align: start;
+
+      h5 {
+        font-size: var(--base-fs);
+      }
+
+      span {
+        font-size: calc(var(--base-fs) * 0.95);
+      }
+    }
+  }
+
+  @media screen and (width > 1279px) {
+    .casts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cast-info {
+      h5 {
+        font-size: calc(var(--base-fs) * 0.85);
+      }
+
+      span {
+        font-size: calc(var(--base-fs) * 0.8);
+      }
+    }
+  }
+}
+
+// Details Section
+.details-section {
+  .tvshow-general-details {
+    padding-block-start: calc(var(--base-padding) * 2.5);
+  }
+}
+
+// Similar TvShows Section
+.similar-tvshows {
+  padding-block-start: calc(var(--base-padding) * 2.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-template-rows: auto;
+  gap: calc(var(--base-gap) * 4);
+
+  @media screen and (width > 768px) {
+    gap: calc(var(--base-gap) * 3);
+  }
+}
