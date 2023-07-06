@@ -9,6 +9,7 @@ import {
 import RootLayout from "./layouts/RootLayout";
 import MoviesLayout from "./layouts/MoviesLayout";
 import TvShowsLayout from "./layouts/TvShowsLayout";
+import SearchLayout from "./layouts/SearchLayout";
 
 /* Pages */
 import Home from "./pages/home/Home";
@@ -18,7 +19,8 @@ import MovieDetails from "./pages/movieDetails/MovieDetails";
 import TvShows from "./pages/tvshows/TvShows";
 import PopularShows from "./pages/tvshows/PopularShows";
 import TvShowDetails from "./pages/tvshowDetails/TvShowDetails";
-import Search from "./pages/Search";
+import MoviesSearch from "./pages/search/MoviesSearch";
+import TvShowsSearch from "./pages/search/TvShowsSearch";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
@@ -48,7 +50,12 @@ const router = createBrowserRouter(
       <Route path="movie/:id" element={<MovieDetails />} />
       <Route path="tvshow/:id" element={<TvShowDetails />} />
 
-      <Route path="search" element={<Search />} />
+      <Route path="search" element={<SearchLayout />}>
+        <Route index element={<MoviesSearch />} />
+        <Route path="movies" element={<MoviesSearch />} />
+        <Route path="tvshows" element={<TvShowsSearch />} />
+      </Route>
+
       <Route path="about" element={<AboutUs />} />
       <Route path="contact" element={<ContactUs />} />
 
