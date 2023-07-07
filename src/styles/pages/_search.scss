@@ -77,7 +77,7 @@
   display: flex;
 
   input {
-    padding: calc(var(--base-padding) * 1.2) calc(var(--base-padding) * 1.5);
+    padding: calc(var(--base-padding) * 1.5);
     font-family: inherit;
     font-size: calc(var(--base-fs) * 1.3);
     background-color: var(--input-bg);
@@ -117,6 +117,7 @@
   @media screen and (width > 768px) {
     input {
       font-size: calc(var(--base-fs) * 1.15);
+      padding-block: calc(var(--base-padding) * 1.2);
     }
 
     button svg {
