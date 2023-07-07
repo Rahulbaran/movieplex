@@ -1,7 +1,7 @@
 export default function Casts({ casts }) {
-  const top_casts = casts.filter(
-    cast => cast.known_for_department === "Acting"
-  );
+  const top_casts = casts
+    .filter(cast => cast.known_for_department === "Acting")
+    .slice(0, 15);
   const writers = casts.filter(cast => cast.known_for_department === "Writing");
   const directors = casts.filter(
     cast => cast.known_for_department === "Directing"
