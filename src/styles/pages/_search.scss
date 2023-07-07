@@ -81,7 +81,7 @@
   input {
     padding: calc(var(--base-padding) * 1.2) calc(var(--base-padding) * 1.5);
     font-family: inherit;
-    font-size: calc(var(--base-fs) * 1.15);
+    font-size: calc(var(--base-fs) * 1.3);
     background-color: var(--input-bg);
     border: none;
     font-weight: var(--fw-light);
@@ -108,11 +108,21 @@
     border-bottom-right-radius: calc(var(--base-br) * 1.25);
 
     svg {
-      font-size: calc(var(--base-fs) * 1.75);
+      font-size: calc(var(--base-fs) * 1.9);
     }
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  @media screen and (width > 768px) {
+    input {
+      font-size: calc(var(--base-fs) * 1.15);
+    }
+
+    button svg {
+      font-size: calc(var(--base-fs) * 1.75);
     }
   }
 }
