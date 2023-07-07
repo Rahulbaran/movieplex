@@ -10,10 +10,10 @@ export default function SearchLayout() {
       <nav className="search-navigation">
         <ul>
           <li>
-            <NavLink to="/movies">Search Movies</NavLink>
+            <NavLink to="movies">Find Movies</NavLink>
           </li>
           <li>
-            <NavLink to="/tvshows">Search TVShows</NavLink>
+            <NavLink to="tvshows">Find TVShows</NavLink>
           </li>
         </ul>
       </nav>
