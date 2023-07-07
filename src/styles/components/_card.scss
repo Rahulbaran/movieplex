@@ -1,13 +1,13 @@
 .card {
   width: 100%;
-  height: 350px;
+  height: 400px;
   position: relative;
   border-radius: calc(var(--base-br) * 0.25);
   transition: scale 300ms ease, translate 300ms ease;
 
   &-header img {
     width: 100%;
-    height: 350px;
+    height: 400px;
     object-fit: cover;
     border-radius: calc(var(--base-br) * 0.25);
     border: 2px solid var(--card-border);
@@ -66,11 +66,6 @@
   }
 
   @media screen and (width > 992px) {
-    &,
-    &-header img {
-      height: 400px;
-    }
-
     &-body {
       h4 {
         font-size: var(--base-fs);
