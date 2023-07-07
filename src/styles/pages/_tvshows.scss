@@ -5,12 +5,12 @@
   align-items: center;
   background-image: linear-gradient(
       to top left,
-      oklch(2% 0.05 200 / 0.75),
-      oklch(10% 0.05 200 / 0.6)
+      oklch(2% 0.05 200 / 0.8),
+      oklch(10% 0.05 200 / 0.65)
     ),
     url("/posters/tvshow-poster.webp");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: center, 50% 30%;
+  background-size: cover;
   padding-inline: calc(var(--base-padding) * 5);
 
   h1 {
