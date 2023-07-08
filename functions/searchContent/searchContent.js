@@ -7,11 +7,10 @@ const TMDB_ACCESS_TOKEN = process.env.TMDB_ACCESS_TOKEN;
 
 export const handler = async event => {
   const { content: contentType, query } = event.queryStringParameters;
-  const page = event.queryStringParameters.page || 1;
 
   const options = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/search/${contentType}?query=${query}&include_adult=false&language=en-US&page=${page}`,
+    url: `https://api.themoviedb.org/3/search/${contentType}?query=${query}&include_adult=false&language=en-US&page=1`,
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`
@@ -25,7 +24,7 @@ export const handler = async event => {
       statusCode: 200,
       body: JSON.stringify({
         status: "success",
-        response: res.data
+        data: res.data
       })
     };
   } catch (error) {
