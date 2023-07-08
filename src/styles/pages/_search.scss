@@ -71,10 +71,12 @@
 
 .search-form {
   background-color: var(--form-bg);
-  padding: calc(var(--base-padding) * 4);
+  padding: calc(var(--base-padding) * 4) calc(var(--base-padding) * 3);
   border-radius: calc(var(--base-br) * 0.2);
   border: 1px solid var(--card-border);
   display: flex;
+  justify-content: center;
+  inline-size: min(100%, 450px);
 
   input {
     padding: calc(var(--base-padding) * 1.5);
@@ -112,6 +114,10 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  @media screen and (480px < width <= 992px) {
+    inline-size: 380px;
   }
 
   @media screen and (width > 768px) {
