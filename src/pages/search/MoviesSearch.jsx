@@ -8,7 +8,7 @@ import Cards from "./Cards";
 
 export default function MoviesSearch() {
   useMeta({ title: "Search Movies | Movieplex", description: "" });
-  const [query, res, handleQuery, handleSearchForm] = useSearch("tv");
+  const [query, res, handleQuery, handleSearchForm] = useSearch("movie");
 
   return (
     <section className="search-section">
