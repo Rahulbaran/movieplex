@@ -76,7 +76,7 @@
   border: 1px solid var(--card-border);
   display: flex;
   justify-content: center;
-  inline-size: min(100%, 450px);
+  inline-size: min(100%, 420px);
 
   input {
     padding: calc(var(--base-padding) * 1.5);
@@ -87,7 +87,7 @@
     font-weight: var(--fw-light);
     border-top-left-radius: calc(var(--base-br) * 1.25);
     border-bottom-left-radius: calc(var(--base-br) * 1.25);
-    max-inline-size: 15em;
+    max-inline-size: 12em;
 
     &::placeholder {
       color: var(--placeholder-text);
@@ -118,7 +118,7 @@
   }
 
   @media screen and (480px < width <= 992px) {
-    inline-size: 380px;
+    inline-size: 350px;
   }
 
   @media screen and (width > 768px) {
