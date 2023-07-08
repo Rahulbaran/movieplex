@@ -1,16 +1,14 @@
-import { useState } from "react";
-
+// Custom Hooks
 import useMeta from "../../hooks/useMeta";
+import useSearch from "../../hooks/useSearch";
+
+// Components
 import SearchForm from "./SearchForm";
+import Cards from "./Cards";
 
 export default function MoviesSearch() {
   useMeta({ title: "Search Movies | Movieplex", description: "" });
-  const [query, setQuery] = useState("");
-
-  const handleQuery = str => setQuery(str);
-  const handleSearchForm = e => {
-    e.preventDefault();
-  };
+  const [query, res, handleQuery, handleSearchForm] = useSearch("tv");
 
   return (
     <section className="search-section">
@@ -22,6 +20,14 @@ export default function MoviesSearch() {
           handleSearchForm={handleSearchForm}
         />
       </div>
+
+      {res.status === "fail" || !res.status ? (
+        ""
+      ) : (
+        <div className="cards">
+          <Cards data={res.data.results} />
+        </div>
+      )}
     </section>
   );
 }
