@@ -5,10 +5,10 @@ import SearchForm from "./SearchForm";
 
 export default function MoviesSearch() {
   useMeta({ title: "Search Movies | Movieplex", description: "" });
-  const [searchStr, setSearchStr] = useState("");
+  const [query, setQuery] = useState("");
 
-  const handleSearchStr = str => setSearchStr(str);
-  const handleSearch = e => {
+  const handleQuery = str => setQuery(str);
+  const handleSearchForm = e => {
     e.preventDefault();
   };
 
@@ -17,9 +17,9 @@ export default function MoviesSearch() {
       <div className="search-form-container">
         <SearchForm
           type="movie"
-          searchStr={searchStr}
-          handleSearchStr={handleSearchStr}
-          handleSearch={handleSearch}
+          query={query}
+          handleQuery={handleQuery}
+          handleSearchForm={handleSearchForm}
         />
       </div>
     </section>

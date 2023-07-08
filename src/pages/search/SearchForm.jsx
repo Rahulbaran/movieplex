@@ -3,9 +3,9 @@ import { MdSearch } from "react-icons/md";
 
 export default function SearchForm({
   type,
-  searchStr,
-  handleSearchStr,
-  handleSearch
+  query,
+  handleQuery,
+  handleSearchForm
 }) {
   const field = useRef("");
   useEffect(() => field.current.focus(), []);
@@ -15,7 +15,7 @@ export default function SearchForm({
       className="search-form"
       spellCheck="false"
       autoComplete="off"
-      onSubmit={handleSearch}
+      onSubmit={handleSearchForm}
     >
       <input
         type="search"
@@ -23,8 +23,8 @@ export default function SearchForm({
         placeholder={`${type} name`}
         required
         ref={field}
-        value={searchStr}
-        onChange={e => handleSearchStr(e.target.value)}
+        value={query}
+        onChange={e => handleQuery(e.target.value)}
       />
       <button type="submit">
         <MdSearch />
