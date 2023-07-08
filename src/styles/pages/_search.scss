@@ -87,6 +87,7 @@
     font-weight: var(--fw-light);
     border-top-left-radius: calc(var(--base-br) * 1.25);
     border-bottom-left-radius: calc(var(--base-br) * 1.25);
+    max-inline-size: 15em;
 
     &::placeholder {
       color: var(--placeholder-text);
