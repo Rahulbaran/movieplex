@@ -133,3 +133,27 @@
     }
   }
 }
+
+// Cards
+.search-section {
+  .cards {
+    padding-inline: calc(var(--base-padding) * 5);
+    padding-block: calc(var(--base-padding) * 5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    grid-template-rows: auto;
+    gap: calc(var(--base-gap) * 4);
+
+    h2 {
+      grid-row: 1 / 5;
+      text-align: center;
+      font-size: calc(var(--base-fs) * 2.5);
+      color: var(--text-2);
+    }
+
+    @media screen and (width > 768px) {
+      padding-inline: calc(var(--base-padding) * 3);
+      gap: calc(var(--base-gap) * 3);
+    }
+  }
+}
