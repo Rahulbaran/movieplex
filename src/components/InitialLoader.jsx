@@ -10,5 +10,7 @@ export default function InitialLoader(res) {
         <p>Try again after sometimes</p>
       </div>
     );
+  } else {
+    return null;
   }
 }
