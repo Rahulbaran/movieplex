@@ -76,7 +76,7 @@
   border: 1px solid var(--card-border);
   display: flex;
   justify-content: center;
-  inline-size: min(100%, 420px);
+  inline-size: min(100%, 450px);
 
   input {
     padding: calc(var(--base-padding) * 1.5);
@@ -87,7 +87,7 @@
     font-weight: var(--fw-light);
     border-top-left-radius: calc(var(--base-br) * 1.25);
     border-bottom-left-radius: calc(var(--base-br) * 1.25);
-    max-inline-size: 12em;
+    inline-size: 12em;
 
     &::placeholder {
       color: var(--placeholder-text);
@@ -125,6 +125,7 @@
     input {
       font-size: calc(var(--base-fs) * 1.15);
       padding-block: calc(var(--base-padding) * 1.2);
+      inline-size: 17em;
     }
 
     button svg {
