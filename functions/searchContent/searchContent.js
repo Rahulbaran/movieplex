@@ -10,7 +10,7 @@ export const handler = async event => {
 
   const options = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/search/${contentType}?query=${query}&include_adult=false&language=en-US&page=1`,
+    url: `https://api.themoviedb.org/3/search/${contentType}?query=${query}&include_adult=true&language=en-US&page=1`,
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`
