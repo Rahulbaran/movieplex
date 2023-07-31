@@ -1,0 +1,26 @@
+{
+  "name": "movieplex",
+  "short_name": "movieplex",
+  "description": "Discover a world of movies and TV shows with our movie app powered by the TMDB API",
+  "start_url": "/",
+  "theme_color": "#00616d",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icons/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/pwa-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/pwa-192x192.png",
+      "sizes": "192x192",
+      "Type": "image/png",
+      "purpose": "any masable"
+    }
+  ]
+}
