@@ -1,4 +1,6 @@
 html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
   font-size: 75%;
 
   @media screen and (width > 480px) {
@@ -41,6 +43,21 @@ body {
   font-weight: var(--fw-regular);
   line-height: var(--base-lh);
   background-color: var(--body-bg);
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+  inline-size: 10px;
+  block-size: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: calc(var(--base-br) * 0.2);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-bg);
 }
 
 .app-wrapper {
