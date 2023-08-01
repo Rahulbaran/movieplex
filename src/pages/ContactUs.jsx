@@ -5,7 +5,8 @@ export default function ContactUs() {
 
   return (
     <main className="container contact-container">
-      <h1>Contact Us Container</h1>
+      <h1>404</h1>
+      <p>The page is under construction</p>
     </main>
   );
 }
