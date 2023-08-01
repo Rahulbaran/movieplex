@@ -20,7 +20,7 @@
       "src": "/icons/pwa-192x192.png",
       "sizes": "192x192",
       "Type": "image/png",
-      "purpose": "any masable"
+      "purpose": "any maskable"
     }
   ]
 }
