@@ -93,3 +93,26 @@ body {
   block-size: 100dvh;
   overflow-x: hidden;
 }
+
+:is(.about-container, .contact-container) {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: var(--base-gap);
+
+  & > h1 {
+    text-align: center;
+    font-size: calc(var(--base-fs) * 10);
+    text-shadow: 0 0 50px oklch(55% 0.1 var(--hue) / 0.75);
+  }
+
+  & > p {
+    font-size: calc(var(--base-fs) * 1.25);
+  }
+
+  @media screen and (width > 768px) {
+    & > h1 {
+      font-size: calc(var(--base-fs) * 8);
+    }
+  }
+}
